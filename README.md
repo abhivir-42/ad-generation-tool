@@ -1,14 +1,16 @@
 # AI-Powered Ad Script Generator
 
-An interactive web application for generating and refining ad scripts using AI agents. The tool allows marketing teams and startups to iteratively create, edit, and enhance scripts through a chat-based interface.
+An interactive web application for generating and refining ad scripts using AI agents. The tool allows marketing teams and startups to iteratively create, edit, and enhance scripts through a chat-based interface, and finally generate a radio ad using our fine-tuned TTS model.
 
 ## Features
 
+- Generate a radio ad using our fine-tuned TTS model
 - Generate professional ad scripts with voice direction
 - Get comprehensive art direction guidelines
-- Refine specific parts of the script with AI assistance
-- Modern, responsive UI built with Next.js and TailwindCSS
-- Powerful backend powered by FastAPI and CrewAI
+- Refine specific parts of the script by your choice or with AI assistance
+
+<!-- - Modern, responsive UI built with Next.js and TailwindCSS
+- Robust backend powered by FastAPI and CrewAI -->
 
 ## Project Structure
 
@@ -112,14 +114,6 @@ The application will be available at:
 - Implements a responsive, modern UI
 - Features real-time script refinement
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
