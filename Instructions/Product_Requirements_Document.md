@@ -4,13 +4,15 @@
 
 ### 1. Overview
 
-The AI-Powered Ad Script Generator is a web-based application that helps marketing teams and startups iteratively generate and refine ad scripts with integrated AI agents. Users interact via a chat interface to provide essential inputs (product name, target audience, ad duration, etc.), and the system generates structured scripts with corresponding art direction. Users can further refine and edit scripts within the web app.
+The AI-Powered Ad Script Generator is a web-based application that helps marketing teams and startups iteratively generate and refine ad scripts with integrated AI agents. Users interact via a text field interface to provide essential inputs (product name, target audience, ad duration, etc.), and the system generates structured scripts with corresponding art direction. Users can further refine and edit scripts within the web app by clicking on the selected sentences in the generated script and then clicking on the "Refine" button.
 
 ### 2. Objectives
 
 - Provide an interactive, professional, and intuitive UI for script generation.
 - Utilize LLM-powered AI agents to iteratively refine ad scripts.
-- Allow users to modify and improve scripts through a collaborative chat interface.
+- Output the generated script and art direction as sepearate lines on the frontend.
+- Allow users to modify and improve scripts through a collaborative chat interface which triggers the agent to refine the script.
+- Allow the users to select specific sentences in the generated script and click on the "Refine" button to trigger the agent to refine the selected sentence.
 - Support art direction generation based on the script.
 - Ensure seamless frontend-backend interaction for fast response times.
 - Deploy efficiently with version control best practices.
