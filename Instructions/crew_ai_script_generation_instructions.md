@@ -5,8 +5,8 @@ To integrate CrewAI into your project's backend, you have several options depend
 1. **Flask API Wrapper**: Create a Flask application to wrap your CrewAI functionality.This allows you to expose CrewAI as an API service, making it accessible to your frontend or other services.
 2. **Modular Architecture**: Organize your CrewAI components into separate files:
     - **`crew.py`**: Define your Crews
-    - **`tasks.py`**: Specify individual tasks
-    - **`agents.py`**: Create agent definitions
+    - **`tasks.yaml`**: Specify individual tasks
+    - **`agents.yaml`**: Create agent definitions
     - **`jobs_manager.py`**: Manage background jobs and status updates
 3. **API Endpoints**: Set up endpoints in your Flask app to trigger CrewAI operations. For example:
     

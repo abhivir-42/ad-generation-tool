@@ -1,0 +1,9 @@
+User name is Alice Collins.
+User is an a marketing manager.
+User is interested in advertising and marketing her products.
+User is based in London, UK.
+User is interested in radio advertising.
+User is interested in radio script generation.
+User is interested in radio voice direction.
+User is interested in radio art direction.
+User is interested in radio production.
