@@ -1,0 +1,87 @@
+generate_script:
+  description: >
+    Create an engaging ad script with voice direction using the following information:
+    Product/Service Niche: {niche}
+    Key Features/Keywords: {keywords}
+    Target Audience: {audience}
+    
+    Requirements:
+    1. Create a script that is 30-60 seconds long when read
+    2. Include voice direction for each line (tone, pace, emphasis)
+    3. Ensure the message resonates with the target audience
+    4. Incorporate key features/keywords naturally
+    5. End with a clear call to action
+  expected_output: >
+    A JSON object containing:
+    {
+      "lines": [
+        {
+          "text": "Script line text",
+          "voice_direction": "Specific voice direction for the line"
+        }
+      ],
+      "estimated_duration": "Estimated duration in seconds"
+    }
+
+generate_art_direction:
+  description: >
+    Create comprehensive art direction guidelines for the following ad script:
+    {script}
+    
+    Consider:
+    - Product/Service: {niche}
+    - Target Audience: {audience}
+    - Key Elements: {keywords}
+    
+    Requirements:
+    1. Specify visual style and mood
+    2. Recommend color palette
+    3. Suggest typography choices
+    4. Describe key visual elements
+    5. Provide layout recommendations
+  expected_output: >
+    A JSON object containing:
+    {
+      "visual_style": "Overall visual style description",
+      "color_palette": ["List of colors with hex codes"],
+      "typography": {
+        "headings": "Font recommendation for headings",
+        "body": "Font recommendation for body text"
+      },
+      "key_elements": ["List of key visual elements"],
+      "layout": "Layout recommendations"
+    }
+
+refine_script:
+  description: >
+    Refine the following script based on specific feedback while maintaining its effectiveness:
+    
+    Original Script:
+    {script}
+    
+    Feedback to Address:
+    {feedback}
+    
+    Context:
+    - Product/Service: {niche}
+    - Target Audience: {audience}
+    - Key Elements: {keywords}
+    
+    Requirements:
+    1. Address the feedback specifically
+    2. Maintain consistent tone and style
+    3. Ensure the message remains clear and impactful
+    4. Keep the script within the original duration
+    5. Update voice directions as needed
+  expected_output: >
+    A JSON object containing:
+    {
+      "lines": [
+        {
+          "text": "Refined script line text",
+          "voice_direction": "Updated voice direction for the line"
+        }
+      ],
+      "changes_made": ["List of specific changes made"],
+      "estimated_duration": "Estimated duration in seconds"
+    }
