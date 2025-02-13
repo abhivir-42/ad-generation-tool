@@ -86,7 +86,7 @@ The above provided code is an excellent starting point for building a robust bac
 
 the jobs_manager.py file in your CrewAI backend project can serve as the "main" file for managing and orchestrating the execution of CrewAI tasks. It acts as the entry point for running, training, testing, or replaying your CrewAI workflows. This file centralizes the logic for interacting with your CrewAI implementation and provides a way to manage background jobs, status updates, and task execution.The code you provided is an excellent example of what could go into such a file. Let me break it down further and clarify its purpose:
 
-## **Purpose of `jobs_manager.py`**
+## **Purpose of `jobs_manager.py`**
 
 - **Centralized Management**: This file serves as the main interface for managing CrewAI workflows. It includes functions to:
     - Run a crew with specified inputs.
@@ -101,7 +101,7 @@ the jobs_manager.py file in your CrewAI backend project can serve as the "main" 
 Yes, this file is conceptually similar to the "main" file in traditional CrewAI projects. It provides a single entry point for interacting with your CrewAI implementation and defines how different functionalities (like running or training crews) should be executed.In your case, jobs_manager.py is tailored to:
 
 1. Accept inputs via environment variables or command-line arguments.
-2. Call specific methods on your **`ScriptGeneration`** crew to perform tasks like **`kickoff`**, **`train`**, **`replay`**, or **`test`**.
+2. Call specific methods on your **`ScriptGeneration`** crew to perform tasks like **`kickoff`**, **`train`**, **`replay`**, or **`test`**.
 3. Handle exceptions gracefully and provide meaningful error messages.
 
 ## **How Does the Provided Code Fit?**
@@ -113,7 +113,7 @@ The code you shared is well-suited for a jobs_manager.py file. Here's how it ali
 1. **Environment Variable Support**:
     - The code reads inputs from an environment variable (**`CREW_INPUTS`**) or command-line arguments, making it flexible for both local testing and deployment in production environments.
 2. **Task-Oriented Functions**:
-    - Functions like **`run()`**, **`train()`**, **`replay()`**, and **`test()`** encapsulate specific CrewAI operations, keeping the code modular and easy to maintain.
+    - Functions like **`run()`**, **`train()`**, **`replay()`**, and **`test()`** encapsulate specific CrewAI operations, keeping the code modular and easy to maintain.
 3. **Error Handling**:
     - Exceptions are caught and raised with detailed error messages, which is essential for debugging during development and monitoring in production.
 4. **JSON Input Parsing**:
@@ -125,11 +125,12 @@ The code you shared is well-suited for a jobs_manager.py file. Here's how it ali
 
 If you're planning to use this in production, you might want to extend it with additional features:
 
-## **1. Logging**
+## **1. Logging**
 
 Integrate logging for better observability:
 
-`pythonimport logging
+```python:Instructions/instructions_for_jobs_manager_in_script_generation.md
+import logging
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -141,17 +142,18 @@ def run(inputs):
         logger.info("Crew completed successfully.")
     except Exception as e:
         logger.error(f"Error occurred: {e}")
-        raise`
+        raise
+```
 
 ## **Environment Setup**
 
 1. **Development Environment**:
     - Ensure you have a Python virtual environment where CrewAI tools are installed.
-    - Install dependencies using **`pip install crewai flask`** (or any other required libraries).
-    - Use **`.env`** files to manage environment variables securely during development.
+    - Install dependencies using **`pip install crewai flask`** (or any other required libraries).
+    - Use **`.env`** files to manage environment variables securely during development.
 2. **Production Environment**:
     - Use Docker to containerize your application along with its dependencies.
-    - Create a **`Dockerfile`** like this:
+    - Create a **`Dockerfile`** like this:
         
         `textFROM python:3.9-slim
         WORKDIR /app
@@ -159,7 +161,7 @@ def run(inputs):
         RUN pip install --no-cache-dir -r requirements.txt
         CMD ["python", "jobs_manager.py"]`
         
-    - Use environment variables (e.g., via AWS Secrets Manager or **`.env`** files) to securely pass sensitive information like API keys.
+    - Use environment variables (e.g., via AWS Secrets Manager or **`.env`** files) to securely pass sensitive information like API keys.
 
 ## **Deployment**
 
