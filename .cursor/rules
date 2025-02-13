@@ -1,0 +1,37 @@
+{
+  "project": {
+    "name": "AI-Powered Ad Script Generator",
+    "description": "An interactive web application for generating and refining ad scripts using LLM agents. The tool allows marketing teams and startups to iteratively create, edit, and enhance scripts through a chat-based interface."
+  },
+  "guidelines": {
+    "code_generation": {
+      "architecture": "Ensure a modular and maintainable architecture with clear separation between frontend (React + Next.js) and backend (FastAPI).",
+      "frontend": "Follow Next.js best practices. Use functional components with hooks, and maintain a structured components directory.",
+      "backend": "Develop RESTful API endpoints using FastAPI, ensuring clean separation of concerns between request handling, business logic, and database operations.",
+      "llm_integration": "Create dedicated service modules for handling interactions with LLM agents. Ensure smooth interaction between chat inputs and AI-generated responses."
+    },
+    "file_patterns": {
+      "frontend_components": "src/components/**/*.tsx",
+      "api_routes": "src/pages/api/**/*.ts",
+      "utils": "src/utils/**/*.ts"
+    },
+    "coding_standards": {
+      "style": "Use Prettier and ESLint for consistent formatting.",
+      "naming_conventions": {
+        "react_components": "Use PascalCase (e.g., AdScriptEditor.tsx).",
+        "functions_and_variables": "Use camelCase (e.g., generateScript).",
+        "api_routes": "Use kebab-case for route names (e.g., /api/generate-script)."
+      },
+      "documentation": "Include JSDoc-style comments for functions and major components."
+    },
+    "ai_behavioral_guidelines": {
+      "context_awareness": "Ensure AI-generated responses align with the project's script structure and user intent.",
+      "input_validation": "Sanitize user input before passing it to LLM agents to prevent malicious injections.",
+      "error_handling": "Implement structured error messages and fallback responses for API failures or invalid AI outputs."
+    },
+    "output_format": {
+      "structure": "Ad scripts should be formatted as a structured JSON object, with each line paired with corresponding art direction.",
+      "editing": "Generated scripts should be editable, allowing users to refine specific sections through targeted interactions."
+    }
+  }
+}
